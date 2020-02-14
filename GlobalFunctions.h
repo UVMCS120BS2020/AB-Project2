@@ -33,17 +33,24 @@ typedef optional<int> optInt;
 bool firstCheck(string &input);
 
 /*
- * Results and Play Again
+ * Play Again
  * Requires: Piano object pointer, string input, valid boolean.
  * Modifies: cin, cout, input, valid
- * Effects: Displays the results of newly entered music,
- *          and prompts user for new input, including playing the same music again.
+ * Effects: Prompts user for new input, including playing the same music again.
  * Calls: firstCheck, getNotes, getOctaves, getDelay,
  * Global function
  */
-void resultsAndPlayAgain(const unique_ptr<Piano> &piano, string &input, bool &valid);
+void playAgain(const unique_ptr<Piano> &piano, string &input, bool &valid);
 
-
+/*
+ * Current Music
+ * Requires: Piano object pointer
+ * Modifies: cin, cout
+ * Effects: Prompts user for new input, including playing the same music again.
+ * Calls: firstCheck, getNotes, getOctaves, getDelay,
+ * Global function
+ */
+void currentMusic(const unique_ptr<Piano> &piano);
 
 
 

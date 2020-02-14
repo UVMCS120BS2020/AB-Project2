@@ -46,15 +46,15 @@ bool firstCheck(string &input) {
     return true;
 }
 
-void resultsAndPlayAgain(const unique_ptr<Piano> &piano, string &input, bool &valid){
+void currentMusic(const unique_ptr<Piano> &piano){
     cout << "\nYour current music:" << endl;
     for (int i = 0; i < piano->getNotes().size(); i++) {
         cout << piano->getNotes()[i] << piano->getOctaves()[i] << " ";
     }
     cout << "\nDelay: " << *piano->getDelay() << " milliseconds" << endl;
-    cout << "Go again? Input (Enter X to exit, or Y to play your music again):";
-    valid = firstCheck(input);
+}
 
+void playAgain(const unique_ptr<Piano> &piano, string &input, bool &valid){
     while (input == "Y" || !valid) {
         if (!valid) {        // Invalid input. Continue until input is valid.
             cout << "Invalid input. Please follow the format." << endl;
@@ -63,14 +63,12 @@ void resultsAndPlayAgain(const unique_ptr<Piano> &piano, string &input, bool &va
         } else {
             piano->play();
 
-            cout << "\nYour current music:" << endl;
-            for (int i = 0; i < piano->getNotes().size(); i++) {
-                cout << piano->getNotes()[i] << piano->getOctaves()[i] << " ";
-            }
-            cout << "\nDelay: " << *piano->getDelay() << " milliseconds" << endl;
+            currentMusic(piano);
+
             cout << "Go again? Input (Enter X to exit, or Y to play your music again):";
 
             valid = firstCheck(input);
         }
     }
 }
+

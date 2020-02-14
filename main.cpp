@@ -47,7 +47,12 @@ int main() {
             piano->setDelay(delay);
             piano->play(input);
 
-            resultsAndPlayAgain(piano, input, valid);
+            currentMusic(piano);
+
+            cout << "Go again? Input (Enter X to exit, or Y to play your music again):";
+            valid = firstCheck(input);
+
+            playAgain(piano, input, valid);
 
         } else {        // "X" was entered. Display message and end program.
             cout << "\nThanks for Playing!" << endl;

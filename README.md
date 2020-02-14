@@ -25,17 +25,18 @@ Why did you choose this class?
         >I made the Piano object a unique pointer in `main.cpp` because I wanted this one pointer to be the only thing accessing this one object.
     - [x] If you are reusing your class from Project 1, declare a new global function that uses at least one object of the class. 
     Why did you choose this function?
-        >I made the `resultsAndPlayAgain` function which shows the music currently stored in the piano object, and asks the user if they would like to hear it again.
+        >I made the `currentMusic` function which shows the music currently stored in the piano object,
+        and the `playAgain` function which asks the user if they would like to hear it again, and does so if "Y" is enterd.
         
 - [ ] **Secondly**, write test cases for the methods/function(s) in a `testing.cpp` file. Commit to GitHub.
     - [ ] If you are reusing code from Project 1, you still need to write test cases for that code (as well as for the new global function).
     - [x] Put an add_executable line in CMakeLists.txt to create an executable for your testing program.
 
-- [ ] **Thirdly**, implement the methods/function(s) in a `.cpp` file. 
+- [x] **Thirdly**, implement the methods/function(s) in a `.cpp` file. 
 Did all of your test cases pass on the first try? Commit to GitHub.
-    >a
+    >Yes! I actually spent a lot of time working out the logic for this program. So far, I haven't been able to find any bugs.
       
-- [ ] **Fourthly**, add more test cases now that you have finished implementing the methods/function(s). 
+- [x] **Fourthly**, add more test cases now that you have finished implementing the methods/function(s). 
 Why do you think you did not have these cases before you implemented the algorithm(s)? Commit to GitHub.
     >a
     - [ ] In your README file, you must write answers to all of the above questions.
