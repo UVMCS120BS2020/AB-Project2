@@ -3,7 +3,6 @@ For this project you will write a class and a nontrivial method (or function).
 You will use it all in a program with smart pointers and optionals. 
 You will write a testing suite to ensure your program functions properly.
 
-
 ## Requirements
 - [x] All of your programming files should be in a private GitHub repository in your section’s organization.
     - [x] The repository must be named with your initials + dash + Project2 (e.g. LD-Project2).
@@ -28,8 +27,8 @@ Why did you choose this class?
         >I made the `currentMusic` function which shows the music currently stored in the piano object,
         and the `playAgain` function which asks the user if they would like to hear it again, and does so if "Y" is enterd.
         
-- [ ] **Secondly**, write test cases for the methods/function(s) in a `testing.cpp` file. Commit to GitHub.
-    - [ ] If you are reusing code from Project 1, you still need to write test cases for that code (as well as for the new global function).
+- [x] **Secondly**, write test cases for the methods/function(s) in a `testing.cpp` file. Commit to GitHub.
+    - [x] If you are reusing code from Project 1, you still need to write test cases for that code (as well as for the new global function).
     - [x] Put an add_executable line in CMakeLists.txt to create an executable for your testing program.
 
 - [x] **Thirdly**, implement the methods/function(s) in a `.cpp` file. 
@@ -38,8 +37,10 @@ Did all of your test cases pass on the first try? Commit to GitHub.
       
 - [x] **Fourthly**, add more test cases now that you have finished implementing the methods/function(s). 
 Why do you think you did not have these cases before you implemented the algorithm(s)? Commit to GitHub.
-    >a
-    - [ ] In your README file, you must write answers to all of the above questions.
+    >There were some cases that I hadn't considered. For instance, I didn't think about spaces in the middle of the input, and because I used `cin >> input`, 
+     only the string that leads up to the space would get processed, even though the input does not follow the format.
+     My fix as a result was to use `getline(cin, input)`.
+    - [x] In your README file, you must write answers to all of the above questions.
     
 - [x] **Fifthly**, write a `main.cpp` that creates a fully functioning, creative, and impressive program.
     - [x] The program should use the optional field of the class in some way.
@@ -51,9 +52,9 @@ The two `add_executable` lines will ensure that you are not running these simult
     - [x] Make sure that the two `add_executable` lines create executables with different names 
       (i.e. the first argument to the function call must be different).
 
-- [ ] All of the above must be committed and pushed to your GitHub repository.
+- [x] All of the above must be committed and pushed to your GitHub repository.
 
-- [ ] On Gradescope, submit the URL of the repository in a file named submission.txt.
+- [x] On Gradescope, submit the URL of the repository in a file named submission.txt.
 
 ## Grading
 The project is out of 70 points.
